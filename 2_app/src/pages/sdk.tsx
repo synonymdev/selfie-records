@@ -119,7 +119,10 @@ fetchRecords();`}
           <h2 className="mt-8 mb-2 text-3xl font-semibold break-words">
             🙏 Acknowledgements
           </h2>
-          <p>Thanks to the creators and contributors of BIP 353.</p>
+          <p>
+            Special thanks to the creators and contributors of BIP 353, whose
+            work inspired and laid the groundwork for Selfie Records.
+          </p>
 
           <h2 className="mt-8 mb-2 text-3xl font-semibold">📄 License</h2>
           <p>
