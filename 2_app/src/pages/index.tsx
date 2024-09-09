@@ -16,7 +16,7 @@ export default function Home() {
   const [name, setName] = useState("hello@miguelmedeiros.dev");
   const [r, setR] = useState<Records | null>(null);
   const [error, setError] = useState<string | null>(null);
-  const [step, setStep] = useState(0);
+  const { setStep, step } = useRecordsContext();
 
   async function searchRecords({ recordName }: { recordName: string }) {
     setSearching(true);
