@@ -10,8 +10,10 @@ import { Github, Home } from "lucide-react";
 import { Button } from "../ui/button";
 
 import { useRecordsContext } from "@/contexts/useRecords";
+import { useRouter } from "next/navigation";
 
 export const Header = () => {
+  const router = useRouter();
   const [copied, setCopied] = useState(false);
   const { setStep } = useRecordsContext();
 
@@ -31,7 +33,7 @@ export const Header = () => {
         <Button
           onClick={() => {
             setStep(0);
-            // router.push("/");
+            router.push("/");
           }}
           variant="outline"
           className="px-2.5 mr-2"
