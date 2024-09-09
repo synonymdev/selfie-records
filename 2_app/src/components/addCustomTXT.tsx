@@ -39,7 +39,7 @@ export function AddCustomTXT({ disabled }: { disabled: boolean }) {
       <DialogTrigger asChild onClick={openModal}>
         <Button
           variant="secondary"
-          className="w-full max-w-[250px] rounded-full mt-8 py-8 text-lg font-semibold"
+          className="w-full md:max-w-[250px] rounded-full mt-4 md:mt-8 py-8 text-lg font-semibold"
           disabled={disabled}
         >
           <SlidersHorizontal className="h-5 w-5 mr-2" />

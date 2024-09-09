@@ -7,7 +7,6 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import CopyToClipboard from "@/components/copyToClipboard";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
 import { ArrowLeftIcon, Book, CheckIcon, ClipboardIcon } from "lucide-react";
@@ -53,11 +52,11 @@ export const Step2 = ({
 
   return (
     <div className="max-w-full text-center h-full">
-      <h1 className="text-6xl font-bold text-[65px]">Your Selfie Records</h1>
+      <h1 className="text-6xl font-bold text-[65px]">Your Records</h1>
       <div className="text-[24px] mt-6 mb-8 dark:text-gray-400">
         We found these{" "}
         <b className="text-black dark:text-white">DNS TXT records</b> for:
-        <span className="flex justify-center text-[32px] mt-4 text-black dark:text-white">
+        <span className="flex justify-center text-[20px] sm:text-[32px] mt-4 text-black dark:text-white break-all">
           <TooltipProvider>
             <Tooltip delayDuration={0}>
               <TooltipTrigger asChild>
@@ -159,7 +158,6 @@ console.log(records);`;
                               borderRadius: "10px",
                             }}
                           />
-                          <CopyToClipboard value={`${txtKey}`} />
                         </div>
                         <div className="grow"></div>
                         {records.records[key].error !== "" && (
@@ -188,10 +186,6 @@ console.log(records);`;
                                 }}
                               />
                             </div>
-                            <div className="grow"></div>
-                            <CopyToClipboard
-                              value={records.records[key].value}
-                            />
                           </>
                         )}
                       </TabsContent>
@@ -213,10 +207,10 @@ console.log(records);`;
                             marginBottom: "20px",
                             marginTop: "10px",
                             borderRadius: "10px",
+                            overflow: "auto",
                           }}
                         />
                         <div className="flex flex-row">
-                          <CopyToClipboard value={code} />
                           <Button
                             variant="secondary"
                             className="ml-2 mt-4 rounded-full"
@@ -247,7 +241,6 @@ console.log(records);`;
                             borderRadius: "10px",
                           }}
                         />
-                        <CopyToClipboard value={`dig @1.1.1.1 txt ${txtKey}`} />
                         <a href="https://man.openbsd.org/dig.1" target="_blank">
                           <Button
                             variant="secondary"
@@ -265,10 +258,10 @@ console.log(records);`;
             })}
         </Accordion>
       </div>
-      <div className="mt-6 gap-4 flex justify-center">
+      <div className="mt-6 gap-4 flex flex-col sm:flex-row justify-center">
         <Button
           variant="secondary"
-          className="w-full max-w-[250px] rounded-full mt-8 py-8 text-lg font-semibold"
+          className="w-full md:max-w-[250px] rounded-full mt-8 py-8 text-lg font-semibold"
           onClick={() => {
             setStep(0);
 
@@ -283,7 +276,7 @@ console.log(records);`;
         </Button>
         <Button
           variant="default"
-          className="w-full max-w-[250px] rounded-full mt-8 py-8 text-lg font-semibold"
+          className="w-full md:max-w-[250px] rounded-full sm:mt-8 py-8 text-lg font-semibold"
           onClick={() => {
             const newUrl = `${window.location.toString()}`;
 

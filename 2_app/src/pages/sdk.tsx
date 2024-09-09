@@ -1,12 +1,11 @@
 import Head from "next/head";
 
 import { Breadcrumbs } from "@/components/breadcrumbs";
-import { useEffect, useState } from "react";
 import { CopyBlock, dracula } from "react-code-blocks";
 
 export default function SDKDocs() {
   return (
-    <div>
+    <>
       <Head>
         <title>Selfie Records | SDK</title>
         <meta
@@ -14,17 +13,19 @@ export default function SDKDocs() {
           content="Facilitating interaction with DNS TXT records for various applications."
         />
       </Head>
-      <section className="flex flex-col items-center w-full lg:px-24 space-y-8">
+      <section className="flex flex-col items-center w-full px-6 md:px-12 space-y-8">
         <div className="text-center">
           <h1 className="text-8xl font-bold leading-tight">SDK</h1>
-          <p className="mt-4 text-[28px] text-gray-500">
+          <p className="mt-4 text-[22px] md:text-[28px] text-gray-500">
             Utilizing DNS TXT records for a variety of applications.
           </p>
         </div>
-        <div className="mt-4 w-full">
-          <Breadcrumbs items={[{ name: "Home", path: "/" }, { name: "SDK" }]} />
-        </div>
         <div className="w-full px-0 max-w-4xl">
+          <div className="mb-4">
+            <Breadcrumbs
+              items={[{ name: "Home", path: "/" }, { name: "SDK" }]}
+            />
+          </div>
           <p>
             <strong>Selfie Records SDK</strong> is designed to interact with DNS
             TXT records, extending the concept of Bitcoin Improvement Proposal
@@ -99,6 +100,7 @@ fetchRecords();`}
               marginBottom: "20px",
               marginTop: "10px",
               borderRadius: "10px",
+              overflow: "auto",
             }}
           />
 
@@ -114,7 +116,7 @@ fetchRecords();`}
             </a>
           </p>
 
-          <h2 className="mt-8 mb-2 text-3xl font-semibold">
+          <h2 className="mt-8 mb-2 text-3xl font-semibold break-words">
             🙏 Acknowledgements
           </h2>
           <p>Thanks to the creators and contributors of BIP 353.</p>
@@ -132,6 +134,6 @@ fetchRecords();`}
           </p>
         </div>
       </section>
-    </div>
+    </>
   );
 }

@@ -25,7 +25,7 @@ export const Header = ({ setStep }: { setStep: (value: number) => void }) => {
   };
 
   return (
-    <div className="w-full text-sm flex gap-4 flex-col-reverse md:flex-row">
+    <div className="w-full text-sm flex gap-4 flex-col-reverse md:flex-row mb-12 sm:mb-16 lg:mb-0">
       <div className="flex w-full justify-center md:justify-start bg-none self-center">
         <Button
           onClick={() => {
@@ -54,7 +54,7 @@ export const Header = ({ setStep }: { setStep: (value: number) => void }) => {
           <TooltipTrigger asChild>
             <div
               onClick={() => copyToClipboard(`npm i selfie-records`)}
-              className="cursor-pointer flex w-full m-auto max-w-[290px] text-center justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200  backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit rounded-xl border lg:bg-gray-200 p-4 lg:dark:bg-zinc-800/30"
+              className="cursor-pointer flex w-full m-auto max-w-[200px] text-center justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200  backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit rounded-xl border lg:bg-gray-200 p-4 lg:dark:bg-zinc-800/30"
             >
               <code
                 className={`font-mono font-bold ${

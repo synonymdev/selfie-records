@@ -24,7 +24,7 @@ export default function App({ Component, pageProps }: AppProps) {
         themes={["light", "dark"]}
       >
         <main
-          className={`flex min-h-screen flex-col items-center p-6 container w-[300px] sm:w-[500px] md:w-[700px] lg:w-[900px] xl:w-[1200px] ${inter.className}`}
+          className={`flex min-h-screen flex-col items-center p-6 container w-[380px] sm:w-[600px] md:w-[720px] lg:w-[900px] xl:w-[1200px] ${inter.className}`}
         >
           <Header setStep={setStep} />
           <div className="grow" />

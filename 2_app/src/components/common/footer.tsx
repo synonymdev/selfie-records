@@ -32,7 +32,7 @@ export const Footer = () => {
   const router = useRouter();
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 text-left gap-3 mb-6 mt-24 lg:mt-0">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 text-left gap-3 mb-6 mt-24">
       {footerItems.map((item, index) => {
         const isExternal = item.external ?? false;
         return (

@@ -38,7 +38,7 @@ _bitcoin-payment.miguelmedeiros.dev
 _bitcoin-payment.pay.miguelmedeiros.dev`;
 
   return (
-    <div>
+    <>
       <Head>
         <title>Selfie Records</title>
         <meta
@@ -49,18 +49,18 @@ _bitcoin-payment.pay.miguelmedeiros.dev`;
       <section className="flex flex-col items-center w-full lg:px-24 space-y-8">
         <div className="text-center">
           <h1 className="text-8xl font-bold leading-tight">Spec</h1>
-          <p className="mt-4 text-[28px] text-gray-500">
+          <p className="mt-4 text-[22px] md:text-[28px] text-gray-500">
             Expanding DNS-based data verification
             <br />
             beyond Bitcoin payment.
           </p>
         </div>
-        <div className="mt-4 w-full">
-          <Breadcrumbs
-            items={[{ name: "Home", path: "/" }, { name: "Spec" }]}
-          />
-        </div>
-        <div className="w-full px-4 lg:px-0 max-w-4xl">
+        <div className="w-full px-0 max-w-4xl">
+          <div className="mb-4 w-full">
+            <Breadcrumbs
+              items={[{ name: "Home", path: "/" }, { name: "Spec" }]}
+            />
+          </div>
           <p>
             <strong>Selfie Records</strong> is an extension to the Bitcoin
             Improvement Proposal (BIP) 353, expanding the concept of DNS-based
@@ -133,6 +133,7 @@ _bitcoin-payment.pay.miguelmedeiros.dev`;
               marginBottom: "20px",
               marginTop: "10px",
               borderRadius: "10px",
+              wordBreak: "break-all",
             }}
           />
           <div className="mb-6">
@@ -170,6 +171,7 @@ _bitcoin-payment.pay.miguelmedeiros.dev`;
               marginBottom: "20px",
               marginTop: "10px",
               borderRadius: "10px",
+              wordBreak: "break-all",
             }}
           />
           <CopyBlock
@@ -183,6 +185,7 @@ _bitcoin-payment.pay.miguelmedeiros.dev`;
               marginBottom: "20px",
               marginTop: "10px",
               borderRadius: "10px",
+              wordBreak: "break-all",
             }}
           />
           <h2 className="mt-8 mb-2 text-3xl font-semibold">
@@ -210,7 +213,7 @@ _bitcoin-payment.pay.miguelmedeiros.dev`;
             </a>
           </p>
 
-          <h2 className="mt-8 mb-2 text-3xl font-semibold">
+          <h2 className="mt-8 mb-2 text-3xl font-semibold break-all">
             🙏 Acknowledgements
           </h2>
           <p>
@@ -231,6 +234,6 @@ _bitcoin-payment.pay.miguelmedeiros.dev`;
           </p>
         </div>
       </section>
-    </div>
+    </>
   );
 }

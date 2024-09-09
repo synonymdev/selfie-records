@@ -61,11 +61,13 @@ export const Step1 = ({
   return (
     <div className="h-full">
       <div className="z-10 flex flex-col items-center justify-end w-full h-full text-center">
-        <h1 className="text-6xl font-bold text-[90px]">Selfie Records</h1>
-        <p className="text-[26px] mt-6 mb-2 dark:text-gray-400">
+        <h1 className="text-6xl font-bold text-[62px] md:text-[90px]">
+          Selfie Records
+        </h1>
+        <p className="text-[20px] md:text-[26px] mt-6 mb-2 dark:text-gray-400">
           Explore the world of{" "}
           <b className="text-black dark:text-white">DNS TXT records</b> for
-          <br />
+          <br className="hidden md:block" />{" "}
           <b className="text-black dark:text-white">payments</b>,{" "}
           <b className="text-black dark:text-white">identities</b> and{" "}
           <b className="text-black dark:text-white">beyond</b>.
@@ -79,7 +81,7 @@ export const Step1 = ({
             placeholder={placeholder}
             name="name"
             value={name}
-            className={`px-12 py-4 mt-6 text-center border-2 w-full text-[45px] border-gray-300 rounded-full dark:border-neutral-700 dark:bg-neutral-800/30 ${
+            className={`px-12 py-6 mt-6 text-center border-2 w-full text-[20px] sm:text[32px] md:text-[45px] border-gray-300 rounded-full dark:border-neutral-700 dark:bg-neutral-800/30 ${
               error !== null && error?.length > 0
                 ? "border-red-500 dark:border-red-500"
                 : ""
@@ -95,7 +97,7 @@ export const Step1 = ({
             <Button
               type="submit"
               variant="default"
-              className="w-full max-w-[250px] rounded-full mt-8 py-8 text-lg font-semibold"
+              className="w-full md:max-w-[250px] rounded-full md:mt-8 py-8 text-lg font-semibold"
               disabled={searching}
             >
               {searching ? (
