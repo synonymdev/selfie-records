@@ -25,7 +25,7 @@ export const Header = ({ setStep }: { setStep: (value: number) => void }) => {
   };
 
   return (
-    <div className="w-full text-sm flex gap-4 flex-col-reverse md:flex-row mb-12 sm:mb-16 lg:mb-0">
+    <div className="w-full text-sm flex gap-4 flex-col-reverse md:flex-row mb-12 sm:mb-16 mt-6">
       <div className="flex w-full justify-center md:justify-start bg-none self-center">
         <Button
           onClick={() => {
