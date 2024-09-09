@@ -1,4 +1,4 @@
-# Selfie Records
+![image](https://github.com/user-attachments/assets/23716bc3-a8ce-49d0-989f-5003f95b7cfc)
 
 This repository contains two main projects: **Selfie Records SDK** and **Selfie Records Website**. Each project extends the use of DNS TXT records, from SDK-based interactions to visual presentation and documentation on the website.
 
