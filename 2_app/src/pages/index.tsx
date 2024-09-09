@@ -8,7 +8,7 @@ import { validateEmail } from "@/lib/validateEmail";
 import { validateDomainOrSubdomain } from "@/lib/validateDomain";
 
 export default function Home() {
-  const { records } = useRecordsContext();
+  const { records, dnsServer } = useRecordsContext();
   const router = useRouter();
   const query = router.query;
 
@@ -24,7 +24,7 @@ export default function Home() {
     const filters = records ? records.join(",") : "";
 
     const response = await fetch(
-      `/api/checkAddress?name=${recordName}&filters=${filters}&dnsServer=1.1.1.1`
+      `/api/checkAddress?name=${recordName}&filters=${filters}&dnsServer=${dnsServer}`
     );
 
     const data = await response.json();
@@ -38,7 +38,7 @@ export default function Home() {
     window.history.pushState({ path: newUrl }, "", newUrl);
   }
 
-  async function onSubmitAddress(event: any) {
+  async function onSubmit(event: any) {
     event.preventDefault();
     setError(null);
 
@@ -84,7 +84,7 @@ export default function Home() {
             name={name}
             setName={setName}
             setError={setError}
-            onSubmit={onSubmitAddress}
+            onSubmit={onSubmit}
             searching={searching}
             error={error}
           />

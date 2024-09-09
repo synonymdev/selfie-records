@@ -37,7 +37,7 @@ export const Step2 = ({
   name: string;
   setStep: (value: number) => void;
 }) => {
-  const { resetRecords } = useRecordsContext();
+  const { resetRecords, dnsServer } = useRecordsContext();
   const router = useRouter();
 
   const [copiedEmail, setCopiedEmail] = useState(false);
@@ -103,7 +103,7 @@ export const Step2 = ({
 const records = getRecords({ 
   name: "${name}",
   filter: ["${key}"],
-  dnsServer: "1.1.1.1"
+  dnsServer: "${dnsServer}"
 });
 
 console.log(records);`;

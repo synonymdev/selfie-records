@@ -8,6 +8,8 @@ type RecordContextType = {
   removeRecord: (record: string) => void;
   clearRecords: () => void;
   resetRecords: () => void;
+  dnsServer: string;
+  setDnsServer: (server: string) => void;
 };
 
 const RecordsContext = createContext<RecordContextType>({
@@ -16,6 +18,8 @@ const RecordsContext = createContext<RecordContextType>({
   removeRecord: (record: string) => {},
   clearRecords: () => {},
   resetRecords: () => {},
+  dnsServer: "1.1.1.1", // Default value for DNS server
+  setDnsServer: (server: string) => {},
 });
 
 const initialRecords = ["bitcoin-payment", "pubky-key", "nostr-key", "pgp-key"];
@@ -23,6 +27,7 @@ const initialRecords = ["bitcoin-payment", "pubky-key", "nostr-key", "pgp-key"];
 export function RecordsProvider({ children }: { children: React.ReactNode }) {
   const router = useRouter();
   const [records, setRecords] = useState(initialRecords);
+  const [dnsServer, setDnsServer] = useState("1.1.1.1"); // Default to Cloudflare
 
   const addRecord = (newRecord: string) => {
     if (!records.includes(newRecord)) {
@@ -39,6 +44,7 @@ export function RecordsProvider({ children }: { children: React.ReactNode }) {
   };
 
   const resetRecords = () => {
+    setDnsServer("1.1.1.1");
     setRecords(initialRecords);
   };
 
@@ -51,7 +57,15 @@ export function RecordsProvider({ children }: { children: React.ReactNode }) {
 
   return (
     <RecordsContext.Provider
-      value={{ records, addRecord, removeRecord, clearRecords, resetRecords }}
+      value={{
+        records,
+        addRecord,
+        removeRecord,
+        clearRecords,
+        resetRecords,
+        dnsServer,
+        setDnsServer,
+      }}
     >
       {children}
     </RecordsContext.Provider>
