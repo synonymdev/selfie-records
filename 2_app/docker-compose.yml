@@ -1,0 +1,20 @@
+version: "3"
+
+services:
+  selfie-records:
+    build:
+      context: ./
+      dockerfile: Dockerfile.dev
+    ports:
+      - 3000:3000
+    volumes:
+      - ./src:/app/src
+      - ../1_sdk:/sdk
+    command: >
+      sh -c "
+        cd /home/miguel/code/synonym/hackweek/1_package && npm link &&
+        cd /home/miguel/code/synonym/hackweek/2_app && npm link sdk &&
+        npm install &&
+        npm run dev
+      "
+    restart: always

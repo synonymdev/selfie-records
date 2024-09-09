@@ -1,0 +1,29 @@
+{
+  "name": "selfie-records",
+  "version": "0.0.1",
+  "description": "A simple SDK for interacting with the Selfie Records DNS TXT records.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "start:dev": "nodemon",
+    "build": "tsc",
+    "test": "jest",
+    "link": "npm link",
+    "test:watch": "jest --watch"
+  },
+  "keywords": [],
+  "author": "Miguel Medeiros <miguel@miguelmedeiros.com.br> (https://miguelmedeiros.dev)",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "@types/node": "^20.11.20",
+    "jest": "^29.7.0",
+    "nodemon": "^3.1.0",
+    "ts-jest": "^29.1.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "dns-socket": "^4.2.2"
+  }
+}
