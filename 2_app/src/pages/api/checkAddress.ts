@@ -1,4 +1,4 @@
-import { getRecords } from "selfie-records";
+import { getRecords } from "@synonymdev/selfie-records";
 
 import type { NextApiRequest, NextApiResponse } from "next";
 
