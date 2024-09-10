@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Image from "next/image";
 
 import { CopyBlock, dracula } from "react-code-blocks";
 
@@ -78,6 +79,41 @@ _bitcoin-payment.pay.miguelmedeiros.dev`;
             identities, configurations, and other data types using standard DNS
             infrastructure, securely and privately.
           </p>
+
+          <h3 className="mt-8 mb-2 text-3xl font-semibold">
+            Why expand BIP353 to support more than just Bitcoin payments?
+          </h3>
+          <p>
+            Initially, BIP353 focused solely on payments through DNS TXT
+            records. However, the infrastructure of DNS is versatile and secure,
+            especially when combined with DNSSEC. This project, Selfie Records,
+            aims to expand the utility of BIP353 to support a variety of use
+            cases through TXT records, including:
+          </p>
+          <ul className="list-disc pl-5 space-y-2">
+            <li>
+              <strong>Identities:</strong> Verifying and associating public keys
+              (e.g., Nostr, Bitcoin) with email addresses or domain names.
+            </li>
+            <li>
+              <strong>Payments:</strong> Continuing to support Bitcoin payments
+              using DNS-based resolutions.
+            </li>
+            <li>
+              <strong>Other data types:</strong> DNS TXT records can store
+              anything from authentication keys to metadata, making it a
+              flexible and decentralized alternative to more traditional data
+              storage methods.
+            </li>
+          </ul>
+          <p>
+            By leveraging the existing DNS infrastructure, we offer a
+            decentralized, secure, and simple solution for handling multiple
+            types of data.
+          </p>
+          <div className="w-full flex justify-center my-8">
+            <img src="/dns.png" alt="DNS use cases" width={453} height={453} />
+          </div>
 
           <h2 className="mt-8 mb-2 text-3xl font-semibold">✨ Features</h2>
           <ul className="list-disc pl-5 space-y-2">
