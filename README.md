@@ -18,7 +18,6 @@ Initially, BIP353 focused solely on payments through DNS TXT records. However, t
 
 By leveraging the existing DNS infrastructure, we offer a decentralized, secure, and simple solution for handling multiple types of data.
 
-
 ## Projects
 
 ### 1. [Selfie Records SDK](./1_package/README.md)
@@ -57,6 +56,12 @@ For more details, check the [SDK README](./1_package/README.md).
 ### 2. [Selfie Records Website](./2_app/README.md)
 
 The **Selfie Records Website** is the official website. It showcases the interface for interacting with DNS TXT records, highlighting the use of payments, identities, and other data through this technology.
+
+<div align="center">
+
+https://github.com/user-attachments/assets/c5ae1a26-2f93-430f-a4be-a485b848067b
+
+</div>
 
 #### 🛠️ Setup and Development:
 To run the development server:
