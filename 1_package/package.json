@@ -1,7 +1,7 @@
 {
-  "name": "selfie-records",
-  "version": "0.0.1",
-  "description": "A simple SDK for interacting with the Selfie Records DNS TXT records.",
+  "name": "@synonymdev/selfie-records",
+  "version": "0.0.1-alpha.1",
+  "description": "SDK for interacting with the Selfie-Records DNS TXT records.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -9,10 +9,26 @@
     "build": "tsc",
     "test": "jest",
     "link": "npm link",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "prepublish": "npm run build"
   },
-  "keywords": [],
-  "author": "Miguel Medeiros <miguel@miguelmedeiros.com.br> (https://miguelmedeiros.dev)",
+  "bugs": {
+    "url": "https://github.com/synonymdev/selfie-records/issues"
+  },
+  "homepage": "https://github.com/synonymdev/selfie-records/tree/main/1_package",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/synonymdev/selfie-records.git"
+  },
+  "keywords": [
+    "dns",
+    "sdk",
+    "selfie-records",
+    "txt-records",
+    "bitcoin",
+    "bip-353"
+  ],
+  "author": "Miguel Medeiros",
   "license": "MIT",
   "devDependencies": {
     "@types/jest": "^29.5.12",

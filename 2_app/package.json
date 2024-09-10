@@ -1,7 +1,7 @@
 {
   "name": "selfie-records-website",
   "version": "0.1.0",
-  "author": "Miguel Medeiros <miguel@miguelmedeiros.com.br> (https://miguelmedeiros.dev)",
+  "author": "Miguel Medeiros",
   "private": true,
   "license": "MIT",
   "scripts": {

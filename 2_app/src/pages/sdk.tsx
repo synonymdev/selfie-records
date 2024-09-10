@@ -61,7 +61,7 @@ export default function SDKDocs() {
           </p>
           <CopyBlock
             theme={dracula}
-            text={`npm i selfie-records`}
+            text={`npm i @synonymdev/selfie-records`}
             wrapLongLines={true}
             language={"bash"}
             showLineNumbers={false}
@@ -79,7 +79,7 @@ export default function SDKDocs() {
           </p>
           <CopyBlock
             theme={dracula}
-            text={`import { getRecords } from "selfie-records";
+            text={`import { getRecords } from "@synonymdev/selfie-records";
       
 async function fetchRecords() {
   const records = await getRecords({
@@ -110,7 +110,7 @@ fetchRecords();`}
             for enhancements.{" "}
             <a
               className="text-blue-400 underline"
-              href="https://github.com/pubky/selfie-records"
+              href="https://github.com/synonymdev/selfie-records"
             >
               GitHub Repo.
             </a>
@@ -129,7 +129,7 @@ fetchRecords();`}
             Released under the{" "}
             <a
               className="text-blue-400 underline"
-              href="https://github.com/pubky/selfie-records/LICENSE"
+              href="https://github.com/synonymdev/selfie-records/LICENSE"
             >
               MIT License
             </a>

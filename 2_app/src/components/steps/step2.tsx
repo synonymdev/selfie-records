@@ -98,7 +98,7 @@ export const Step2 = ({
                 txtKey = `_${key}.${name}`;
               }
 
-              const code = `import { getRecords } from "selfie-records";
+              const code = `import { getRecords } from "@synonymdev/selfie-records";
 
 const records = getRecords({ 
   name: "${name}",

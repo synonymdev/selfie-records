@@ -23,7 +23,7 @@ const footerItems = [
     title: "Contribute",
     description:
       "Help us improve our spec, SDK and tools around Selfie Records.",
-    href: "https://github.com/pubky/selfie-records",
+    href: "https://github.com/synonymdev/selfie-records",
     external: true,
   },
 ];
