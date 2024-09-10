@@ -1,6 +1,6 @@
 {
   "name": "@synonymdev/selfie-records",
-  "version": "0.0.1-alpha.3",
+  "version": "0.0.1-alpha.4",
   "description": "SDK for interacting with the Selfie-Records DNS TXT records.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
