@@ -18,7 +18,7 @@ Selfie Records utilizes DNS TXT records for storing and retrieving arbitrary dat
 Install the SDK package using npm to get started with Selfie Records.
 
 ```bash
-npm i selfie-records
+npm i @synonymdev/selfie-records
 ```
 
 ## ⚙️ Usage
@@ -26,7 +26,7 @@ npm i selfie-records
 Utilize the SDK to interact with DNS TXT records for various applications.
 
 ```javascript
-import { getRecords } from "selfie-records";
+import { getRecords } from "@synonymdev/selfie-records";
 
 async function fetchRecords() {
   const records = await getRecords({
