@@ -4,6 +4,7 @@ import Image from "next/image";
 import { CopyBlock, dracula } from "react-code-blocks";
 
 import { Breadcrumbs } from "@/components/breadcrumbs";
+import Link from "next/link";
 
 export default function Docs() {
   const code = `; <<>> DiG 9.18.24-0ubuntu0.22.04.1-Ubuntu <<>> @1.1.1.1 txt hello.user._pubky-key.miguelmedeiros.dev
@@ -112,7 +113,12 @@ _bitcoin-payment.pay.miguelmedeiros.dev`;
             types of data.
           </p>
           <div className="w-full flex justify-center my-8">
-            <img src="/dns.png" alt="DNS use cases" width={453} height={453} />
+            <Image
+              src="/dns.png"
+              alt="DNS use cases"
+              width={453}
+              height={453}
+            />
           </div>
 
           <h2 className="mt-8 mb-2 text-3xl font-semibold">✨ Features</h2>
@@ -229,9 +235,9 @@ _bitcoin-payment.pay.miguelmedeiros.dev`;
           </h2>
           <p>
             The{" "}
-            <a href="/sdk" className="text-blue-400 underline">
+            <Link href="/sdk" className="text-blue-400 underline">
               Selfie Records SDK
-            </a>{" "}
+            </Link>{" "}
             provides a comprehensive guide to integrating and using the protocol
             in your applications. See the SDK documentation for detailed
             examples and API descriptions.
@@ -241,12 +247,12 @@ _bitcoin-payment.pay.miguelmedeiros.dev`;
           <p>
             We welcome contributions from the community. Make an issue or submit
             a pull request to help improve Selfie Records.{" "}
-            <a
+            <Link
               className="text-blue-400 underline"
               href="https://github.com/pubky/selfie-records"
             >
               GitHub Repo.
-            </a>
+            </Link>
           </p>
 
           <h2 className="mt-8 mb-2 text-3xl font-semibold break-all">
@@ -260,12 +266,12 @@ _bitcoin-payment.pay.miguelmedeiros.dev`;
           <h2 className="mt-8 mb-2 text-3xl font-semibold">📄 License</h2>
           <p>
             All Selfie Records repositories are released under{" "}
-            <a
+            <Link
               className="text-blue-400 underline"
               href="https://github.com/pubky/selfie-records/LICENSE"
             >
               MIT License
-            </a>
+            </Link>
             .
           </p>
         </div>

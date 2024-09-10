@@ -4,20 +4,9 @@ services:
   selfie-records:
     build:
       context: ./2_app
-      dockerfile: Dockerfile.dev
+      dockerfile: Dockerfile
     ports:
       - 3000:3000
     volumes:
-      - ./1_package:/package
       - ./2_app/src:/app/src
-    command: >
-      bash -c "
-        cd /package && 
-        npm install && 
-        npm run link && 
-        cd /app && 
-        npm install &&
-        npm link selfie-records &&
-        npm run dev
-      "
     restart: always
