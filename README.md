@@ -2,6 +2,23 @@
 
 This repository contains two main projects: **Selfie Records SDK** and **Selfie Records Website**. Each project extends the use of DNS TXT records, from SDK-based interactions to visual presentation and documentation on the website.
 
+## Extending BIP353 to Broader Use Cases
+
+<div style="">
+  <img src="./0_docs/dns.png" alt="DNS use cases" style="width: 100%; max-width: 400px; margin: 0 auto; display: block;">
+</div>
+
+### Why expand BIP353 to support more than just Bitcoin payments?
+
+Initially, BIP353 focused solely on payments through DNS TXT records. However, the infrastructure of DNS is versatile and secure, especially when combined with DNSSEC. This project, Selfie Records, aims to expand the utility of BIP353 to support a variety of use cases through TXT records, including:
+
+- **Identities:** Verifying and associating public keys (e.g., Nostr, Bitcoin) with email addresses or domain names.
+- **Payments:** Continuing to support Bitcoin payments using DNS-based resolutions.
+- **Other data types:** DNS TXT records can store anything from authentication keys to metadata, making it a flexible and decentralized alternative to more traditional data storage methods.
+
+By leveraging the existing DNS infrastructure, we offer a decentralized, secure, and simple solution for handling multiple types of data.
+
+
 ## Projects
 
 ### 1. [Selfie Records SDK](./1_package/README.md)
