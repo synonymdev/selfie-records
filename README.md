@@ -32,12 +32,12 @@ The **Selfie Records SDK** is designed to interact with DNS TXT records, offerin
 
 #### 🚀 Installation:
 ```bash
-npm i selfie-records
+npm i @synonymdev/selfie-records
 ```
 
 #### ⚙️ Usage:
 ```javascript
-import { getRecords } from "selfie-records";
+import { getRecords } from "@synonymdev/selfie-records";
 
 async function fetchRecords() {
   const records = await getRecords({
@@ -56,11 +56,7 @@ For more details, check the [SDK README](./1_package/README.md).
 
 ### 2. [Selfie Records Website](./2_app/README.md)
 
-The **Selfie Records Website** is the official website built using **Next.js** and **TailwindCSS**. It showcases the interface for interacting with DNS TXT records, highlighting the use of payments, identities, and other data through this technology.
-
-#### 💻 Tech Stack:
-- **Next.js**
-- **TailwindCSS**
+The **Selfie Records Website** is the official website. It showcases the interface for interacting with DNS TXT records, highlighting the use of payments, identities, and other data through this technology.
 
 #### 🛠️ Setup and Development:
 To run the development server:
@@ -76,6 +72,7 @@ For more information, see the [Website README](./2_app/README.md).
 
 ```plaintext
 /
+├── 0_docs/              # Docs assets and images
 ├── 1_package/           # Selfie Records SDK
 ├── 2_app/               # Selfie Records Website
 ├── docker-compose.yml   # Selfie Records Docker Compose file
