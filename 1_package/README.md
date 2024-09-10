@@ -43,7 +43,7 @@ fetchRecords();
 
 ## 🤝 Contributing
 
-Contributions are encouraged! Submit pull requests or file issues for enhancements. [GitHub Repo](https://github.com/pubky/selfie-records).
+Contributions are encouraged! Submit pull requests or file issues for enhancements. [GitHub Repo](https://github.com/synonymdev/selfie-records).
 
 ## 🙏 Acknowledgements
 
