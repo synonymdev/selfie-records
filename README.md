@@ -4,7 +4,7 @@ This repository contains two main projects: **Selfie Records SDK** and **Selfie 
 
 ## Extending BIP353 to Broader Use Cases
 
-<div style="">
+<div align="center">
   <img src="./0_docs/dns.png" alt="DNS use cases" style="width: 453px; margin: 0 auto; display: block;">
 </div>
 
