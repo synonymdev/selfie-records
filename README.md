@@ -42,7 +42,7 @@ import { getRecords } from "@synonymdev/selfie-records";
 async function fetchRecords() {
   const records = await getRecords({
     name: "hello@miguelmedeiros.dev",
-    filters: ["bitcoin-payment", "nostr-key"], // optional
+    filters: ["bitcoin-payment", "nostr"], // optional
     dnsServer: "1.1.1.1", // optional
   });
 

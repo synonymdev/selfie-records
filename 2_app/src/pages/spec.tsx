@@ -7,25 +7,25 @@ import { Breadcrumbs } from "@/components/breadcrumbs";
 import Link from "next/link";
 
 export default function Docs() {
-  const code = `; <<>> DiG 9.18.24-0ubuntu0.22.04.1-Ubuntu <<>> @1.1.1.1 txt hello.user._pubky-key.miguelmedeiros.dev
+  const code = `; <<>> DiG 9.18.24-0ubuntu0.22.04.1-Ubuntu <<>> @1.1.1.1 txt hello.user._nostr.miguelmedeiros.dev
 ; (1 server found)
 ;; global options: +cmd
 ;; Got answer:
-;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 56001
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 25983
 ;; flags: qr rd ra ad; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
 
 ;; OPT PSEUDOSECTION:
 ; EDNS: version: 0, flags:; udp: 1232
 ;; QUESTION SECTION:
-;hello.user._pubky-key.miguelmedeiros.dev. IN TXT
+;hello.user._nostr.miguelmedeiros.dev. IN TXT
 
 ;; ANSWER SECTION:
-hello.user._pubky-key.miguelmedeiros.dev. 60 IN TXT "pk:o1gg96ewuojmopcjbz8895478wdtxtzzuxnfjjz8o8e77csa1ngo"
+hello.user._nostr.miguelmedeiros.dev. 60 IN TXT "npub1j35k2lyes6x45sj2nyvsmefye6k4esurwp6wn3u3mtpt6ys5u8yqzjxygp"
 
-;; Query time: 60 msec
+;; Query time: 210 msec
 ;; SERVER: 1.1.1.1#53(1.1.1.1) (UDP)
-;; WHEN: Sat Jul 27 21:25:58 -03 2024
-;; MSG SIZE  rcvd: 137`;
+;; WHEN: Tue Sep 10 18:13:45 -03 2024
+;; MSG SIZE  rcvd: 141`;
 
   const recordFormats = `# identity.user._key.domain.com
 # hello@miguelmedeiros.dev
@@ -199,12 +199,12 @@ _bitcoin-payment.pay.miguelmedeiros.dev`;
           <p>
             Use the <code>dig</code> command to query a TXT record from a
             specific DNS server. The following example retrieves the TXT record
-            for the domain <code>hello.user._pubky-key.miguelmedeiros.dev</code>{" "}
+            for the domain <code>hello.user._nostr.miguelmedeiros.dev</code>{" "}
             from the Cloudflare DNS server.
           </p>
           <CopyBlock
             theme={dracula}
-            text={`dig @1.1.1.1 txt hello.user._pubky-key.miguelmedeiros.dev`}
+            text={`dig @1.1.1.1 txt hello.user._nostr.miguelmedeiros.dev`}
             wrapLongLines={true}
             language={"bash"}
             showLineNumbers={false}
@@ -249,7 +249,7 @@ _bitcoin-payment.pay.miguelmedeiros.dev`;
             a pull request to help improve Selfie Records.{" "}
             <Link
               className="text-blue-400 underline"
-              href="https://github.com/pubky/selfie-records"
+              href="https://github.com/synonymdev/selfie-records"
             >
               GitHub Repo.
             </Link>
@@ -268,7 +268,7 @@ _bitcoin-payment.pay.miguelmedeiros.dev`;
             All Selfie Records repositories are released under{" "}
             <Link
               className="text-blue-400 underline"
-              href="https://github.com/pubky/selfie-records/LICENSE"
+              href="https://github.com/synonymdev/selfie-records/LICENSE"
             >
               MIT License
             </Link>

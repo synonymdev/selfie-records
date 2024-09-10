@@ -26,7 +26,7 @@ const RecordsContext = createContext<RecordContextType>({
   setStep: (value: number) => {},
 });
 
-const initialRecords = ["bitcoin-payment", "pubky-key", "nostr-key", "pgp-key"];
+const initialRecords = ["bitcoin-payment", "nostr", "pgp", "node-uri"];
 
 export function RecordsProvider({ children }: { children: React.ReactNode }) {
   const router = useRouter();

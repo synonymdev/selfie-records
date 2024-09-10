@@ -1,12 +1,6 @@
 import { InputObject, Result, TransformedObject } from "../types";
 
-export const defaultRecords = [
-  "bitcoin-payment",
-  "pgp-key",
-  "pubky-key",
-  "nostr-key",
-  "node-uri",
-];
+export const defaultRecords = ["bitcoin-payment", "pgp", "nostr", "node-uri"];
 
 export function normalizeResult(input: InputObject): TransformedObject {
   const transformedRecords: TransformedObject = {};
