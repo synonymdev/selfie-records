@@ -5,7 +5,7 @@ This repository contains two main projects: **Selfie Records SDK** and **Selfie 
 ## Extending BIP353 to Broader Use Cases
 
 <div style="">
-  <img src="./0_docs/dns.png" alt="DNS use cases" style="width: 100%; max-width: 400px; margin: 0 auto; display: block;">
+  <img src="./0_docs/dns.png" alt="DNS use cases" style="width: 453px; margin: 0 auto; display: block;">
 </div>
 
 ### Why expand BIP353 to support more than just Bitcoin payments?
