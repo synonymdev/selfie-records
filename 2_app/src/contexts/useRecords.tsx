@@ -1,6 +1,6 @@
 "use client";
-import { createContext, useState, useEffect, useContext } from "react";
-import { useRouter } from "next/router";
+
+import { createContext, useState, useContext } from "react";
 
 type RecordContextType = {
   records: string[];
@@ -12,6 +12,7 @@ type RecordContextType = {
   setDnsServer: (server: string) => void;
   step: number;
   setStep: (value: number) => void;
+  setRecords: (records: string[]) => void;
 };
 
 const RecordsContext = createContext<RecordContextType>({
@@ -24,13 +25,13 @@ const RecordsContext = createContext<RecordContextType>({
   setDnsServer: (server: string) => {},
   step: 0,
   setStep: (value: number) => {},
+  setRecords: (records: string[]) => {},
 });
 
 const initialRecords = ["bitcoin-payment", "nostr", "pgp", "node-uri"];
 
 export function RecordsProvider({ children }: { children: React.ReactNode }) {
-  const router = useRouter();
-  const [records, setRecords] = useState(initialRecords);
+  const [records, setRecords] = useState([] as string[]);
   const [dnsServer, setDnsServer] = useState("1.1.1.1"); // Default to Cloudflare
   const [step, setStep] = useState(0);
 
@@ -53,13 +54,6 @@ export function RecordsProvider({ children }: { children: React.ReactNode }) {
     setRecords(initialRecords);
   };
 
-  useEffect(() => {
-    if (router.query?.filters && typeof router.query.filters === "string") {
-      const filters = router.query.filters;
-      setRecords(filters.split(","));
-    }
-  }, [router.query.filters]);
-
   return (
     <RecordsContext.Provider
       value={{
@@ -72,6 +66,7 @@ export function RecordsProvider({ children }: { children: React.ReactNode }) {
         setDnsServer,
         step,
         setStep,
+        setRecords,
       }}
     >
       {children}

@@ -21,7 +21,11 @@ export default function Home() {
   async function searchRecords({ recordName }: { recordName: string }) {
     setSearching(true);
 
-    const filters = records ? records.join(",") : "";
+    let filters = records ? records.join(",") : "";
+
+    if (router.query?.filters) {
+      filters = router.query?.filters as string;
+    }
 
     const response = await fetch(
       `/api/checkAddress?name=${recordName}&filters=${filters}&dnsServer=${dnsServer}`
