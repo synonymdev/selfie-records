@@ -31,7 +31,7 @@ const RecordsContext = createContext<RecordContextType>({
 const initialRecords = ["bitcoin-payment", "nostr", "pgp", "node-uri"];
 
 export function RecordsProvider({ children }: { children: React.ReactNode }) {
-  const [records, setRecords] = useState([] as string[]);
+  const [records, setRecords] = useState(initialRecords as string[]);
   const [dnsServer, setDnsServer] = useState("1.1.1.1"); // Default to Cloudflare
   const [step, setStep] = useState(0);
 

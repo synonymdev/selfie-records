@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, use } from "react";
 import { useRouter } from "next/router";
 
 import { Records, Step2 } from "@/components/steps/step2";
@@ -21,10 +21,12 @@ export default function Home() {
   async function searchRecords({ recordName }: { recordName: string }) {
     setSearching(true);
 
-    let filters = records ? records.join(",") : "";
+    let filters = "";
 
     if (router.query?.filters) {
       filters = router.query?.filters as string;
+    } else {
+      filters = records ? records.join(",") : "";
     }
 
     const response = await fetch(
