@@ -10,7 +10,7 @@ export default function Document() {
         <script
           defer
           data-domain="selfie-records.com"
-          src="https://_analytics.synonym.to/js/script.tagged-events.js"
+          src="https://analytics.synonym.to/js/script.tagged-events.js"
         ></script>
 
         <link rel="icon" href="map-pin-check-inside.svg" />
